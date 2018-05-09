@@ -6,11 +6,11 @@
 var Design = {};
 
 Design.info = {
-	"name": "Plato",
+	"name": "FatPlato",
 	"designer": "Amit Nambiar",
-	"version": "1.0.1",
+	"version": "1.0.0",
 	"license": "MIT",
-	"short_desc": "A single seater for your gaming sessions.",
+	"short_desc": "Comfortable single seater for your gaming sessions.",
 	"long_desc": "",
 	"url": null,
 	"message": null,
@@ -31,7 +31,7 @@ Design.inputs = {
 	},
 	"weight": { 
 		"type": "slider",
-		"label": "Weight(kilos, you need to get fit if its more tha this)",
+		"label": "Weight(kilos)",
 		"default": 65,
 		"min": 30,
 		"max": 150
@@ -249,34 +249,34 @@ function updatePts() {
 
 
 // inner profile
-var i_bs_pts_start = [ 		[200, 0, 0], 		[200, 0, 252], 		[200, 0, 605] 		];
-var i_bk_pts_start = [ 		[200, 0, 605], 		[200, 400, 720], 	[200, 852, 716] 	];
-var i_tp_pts_start = [		[200, 852, 716], 	[200, 920, 627], 	[200, 860, 552] 	];
-var i_st_pts_start = [		[200, 860, 552], 	[200, 485, 366], 	[200, 496, 14]		];
-var i_ft_pts_start = [		[200, 496, 14], 	[200, 456, -63],	[200, 0, 0]			];
+var i_bs_pts_start = [ 		[240, 0, 0], 		[240, 0, 252], 		[240, 0, 605] 		];
+var i_bk_pts_start = [ 		[240, 0, 605], 		[240, 400, 720], 	[240, 852, 716] 	];
+var i_tp_pts_start = [		[240, 852, 716], 	[240, 920, 627], 	[240, 860, 552] 	];
+var i_st_pts_start = [		[240, 860, 552], 	[240, 485, 366], 	[240, 496, 14]		];
+var i_ft_pts_start = [		[240, 496, 14], 	[240, 456, -63],	[240, 0, 0]			];
 
 
 // outer profile
-var o_bs_pts_start = [		[360, 0, 0], 		[360, 0, 240],		[360, 0, 530]		];
-var o_bk_pts_start = [		[360, 0, 530],		[360, 540, 660],	[360, 907, 640]		];
-var o_tp_pts_start = [		[360, 907, 640],	[360, 965, 570],	[360, 907, 510]		];
-var o_st_pts_start = [		[360, 907, 510],	[360, 503, 330],	[360, 520, 13]		];
-var o_ft_pts_start = [		[360, 520, 13],		[360, 405, -75],	[360, 0, 0]			];
+var o_bs_pts_start = [		[400, 0, 0], 		[400, 0, 240],		[400, 0, 530]		];
+var o_bk_pts_start = [		[400, 0, 530],		[400, 540, 660],	[400, 907, 640]		];
+var o_tp_pts_start = [		[400, 907, 640],	[400, 965, 570],	[400, 907, 510]		];
+var o_st_pts_start = [		[400, 907, 510],	[400, 503, 330],	[400, 520, 13]		];
+var o_ft_pts_start = [		[400, 520, 13],		[400, 405, -75],	[400, 0, 0]			];
 
 
 
-var i_bs_pts_mirr_start = [ 	[-200, 0, 0], 		[-200, 0, 252], 	[-200, 0, 605] 		];
-var i_bk_pts_mirr_start = [ 	[-200, 0, 605], 	[-200, 400, 720], 	[-200, 852, 716] 	];
-var i_tp_pts_mirr_start = [		[-200, 852, 716], 	[-200, 920, 627], 	[-200, 860, 552] 	];
-var i_st_pts_mirr_start = [		[-200, 860, 552], 	[-200, 485, 366], 	[-200, 496, 14]		];
-var i_ft_pts_mirr_start = [		[-200, 496, 14], 	[-200, 456, -63],	[-200, 0, 0]		];
+var i_bs_pts_mirr_start = [ 	[-240, 0, 0], 		[-240, 0, 252], 	[-240, 0, 605] 		];
+var i_bk_pts_mirr_start = [ 	[-240, 0, 605], 	[-240, 400, 720], 	[-240, 852, 716] 	];
+var i_tp_pts_mirr_start = [		[-240, 852, 716], 	[-240, 920, 627], 	[-240, 860, 552] 	];
+var i_st_pts_mirr_start = [		[-240, 860, 552], 	[-240, 485, 366], 	[-240, 496, 14]		];
+var i_ft_pts_mirr_start = [		[-240, 496, 14], 	[-240, 456, -63],	[-240, 0, 0]		];
 
 
-var o_bs_pts_mirr_start = [		[-360, 0, 0], 		[-360, 0, 240],		[-360, 0, 530]		];
-var o_bk_pts_mirr_start = [		[-360, 0, 530],		[-360, 540, 660],	[-360, 907, 640]	];
-var o_tp_pts_mirr_start = [		[-360, 907, 640],	[-360, 965, 570],	[-360, 907, 510]	];
-var o_st_pts_mirr_start = [		[-360, 907, 510],	[-360, 503, 330],	[-360, 520, 13]		];
-var o_ft_pts_mirr_start = [		[-360, 520, 13],	[-360, 405, -75],	[-360, 0, 0]		];
+var o_bs_pts_mirr_start = [		[-400, 0, 0], 		[-400, 0, 240],		[-400, 0, 530]		];
+var o_bk_pts_mirr_start = [		[-400, 0, 530],		[-400, 540, 660],	[-400, 907, 640]	];
+var o_tp_pts_mirr_start = [		[-400, 907, 640],	[-400, 965, 570],	[-400, 907, 510]	];
+var o_st_pts_mirr_start = [		[-400, 907, 510],	[-400, 503, 330],	[-400, 520, 13]		];
+var o_ft_pts_mirr_start = [		[-400, 520, 13],	[-400, 405, -75],	[-400, 0, 0]		];
 
 
 
