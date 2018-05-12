@@ -36,9 +36,9 @@ Design.inputs = {
 		"min": 30,
 		"max": 150
 	},
-	"high-back": {
+	"pinched-ears": {
 		"type": "bool",
-		"label": "High-back",
+		"label": "Pinched Ears",
 		"default": false
 	},
 	"colour": {
@@ -141,10 +141,10 @@ function updatePts() {
 
 
 
-	// high-back alterations - move certain parts of base, back, top and seat curve backwards and upwards
+	// pinched-ears alterations - move certain parts of base, back, top and seat curve backwards and upwards
 	// (move it back to avoid the feeling of sitting against a vertical wall) 
-	add_highback_y = Design.inputState["high-back"] ? 120 : 0;
-	add_highback_z = Design.inputState["high-back"] ? 80 : 0;
+	add_highback_y = Design.inputState["pinched-ears"] ? 120 : 0;
+	add_highback_z = Design.inputState["pinched-ears"] ? 80 : 0;
 
 	add_weight_out_y = map_range(Design.inputState["weight"], Design.inputs.weight.min, Design.inputs.weight.max, 0, 90);
 	add_weight_in_y = map_range(Design.inputState["weight"], Design.inputs.weight.min, Design.inputs.weight.max, 0, 60);
