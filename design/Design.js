@@ -144,7 +144,7 @@ function updatePts() {
 	// high-back alterations - move certain parts of base, back, top and seat curve backwards and upwards
 	// (move it back to avoid the feeling of sitting against a vertical wall) 
 	add_highback_y = Design.inputState["high-back"] ? 120 : 0;
-	add_highback_z = Design.inputState["high-back"] ? 40 : 0;
+	add_highback_z = Design.inputState["high-back"] ? 80 : 0;
 
 	add_weight_out_y = map_range(Design.inputState["weight"], Design.inputs.weight.min, Design.inputs.weight.max, 0, 90);
 	add_weight_in_y = map_range(Design.inputState["weight"], Design.inputs.weight.min, Design.inputs.weight.max, 0, 60);
@@ -166,33 +166,33 @@ function updatePts() {
 	o_bk_pts_mirr[0][2] += add_highback_z;
 
 	// move back curve up and back
-	i_bk_pts[1][1] += add_highback_y + add_weight_in_y; i_bk_pts[1][2] += add_highback_z;
-	i_bk_pts[2][1] += add_highback_y + add_weight_in_y; i_bk_pts[2][2] += add_highback_z;
+	// i_bk_pts[1][1] += add_highback_y + add_weight_in_y; i_bk_pts[1][2] += add_highback_z;
+	// i_bk_pts[2][1] += add_highback_y + add_weight_in_y; i_bk_pts[2][2] += add_highback_z;
 	o_bk_pts[1][1] += add_highback_y + add_weight_out_y; o_bk_pts[1][2] += add_highback_z;
 	o_bk_pts[2][1] += add_highback_y + add_weight_out_y; o_bk_pts[2][2] += add_highback_z;
-	i_bk_pts_mirr[1][1] += add_highback_y + add_weight_in_y; i_bk_pts_mirr[1][2] += add_highback_z;
-	i_bk_pts_mirr[2][1] += add_highback_y + add_weight_in_y; i_bk_pts_mirr[2][2] += add_highback_z;
+	// i_bk_pts_mirr[1][1] += add_highback_y + add_weight_in_y; i_bk_pts_mirr[1][2] += add_highback_z;
+	// i_bk_pts_mirr[2][1] += add_highback_y + add_weight_in_y; i_bk_pts_mirr[2][2] += add_highback_z;
 	o_bk_pts_mirr[1][1] += add_highback_y + add_weight_out_y; o_bk_pts_mirr[1][2] += add_highback_z;
 	o_bk_pts_mirr[2][1] += add_highback_y + add_weight_out_y; o_bk_pts_mirr[2][2] += add_highback_z;
 
 	// move top-curve full up and back
-	i_tp_pts[0][1] += add_highback_y + add_weight_in_y; i_tp_pts[0][2] += add_highback_z;
-	i_tp_pts[1][1] += add_highback_y + add_weight_in_y; i_tp_pts[1][2] += add_highback_z;
-	i_tp_pts[2][1] += add_highback_y + add_weight_in_y; i_tp_pts[2][2] += add_highback_z;
+	// i_tp_pts[0][1] += add_highback_y + add_weight_in_y; i_tp_pts[0][2] += add_highback_z;
+	// i_tp_pts[1][1] += add_highback_y + add_weight_in_y; i_tp_pts[1][2] += add_highback_z;
+	// i_tp_pts[2][1] += add_highback_y + add_weight_in_y; i_tp_pts[2][2] += add_highback_z;
 	o_tp_pts[0][1] += add_highback_y + add_weight_out_y; o_tp_pts[0][2] += add_highback_z;
 	o_tp_pts[1][1] += add_highback_y + add_weight_out_y; o_tp_pts[1][2] += add_highback_z;
 	o_tp_pts[2][1] += add_highback_y + add_weight_out_y; o_tp_pts[2][2] += add_highback_z;
-	i_tp_pts_mirr[0][1] += add_highback_y + add_weight_in_y; i_tp_pts_mirr[0][2] += add_highback_z;
-	i_tp_pts_mirr[1][1] += add_highback_y + add_weight_in_y; i_tp_pts_mirr[1][2] += add_highback_z;
-	i_tp_pts_mirr[2][1] += add_highback_y + add_weight_in_y; i_tp_pts_mirr[2][2] += add_highback_z;
+	// i_tp_pts_mirr[0][1] += add_highback_y + add_weight_in_y; i_tp_pts_mirr[0][2] += add_highback_z;
+	// i_tp_pts_mirr[1][1] += add_highback_y + add_weight_in_y; i_tp_pts_mirr[1][2] += add_highback_z;
+	// i_tp_pts_mirr[2][1] += add_highback_y + add_weight_in_y; i_tp_pts_mirr[2][2] += add_highback_z;
 	o_tp_pts_mirr[0][1] += add_highback_y + add_weight_out_y; o_tp_pts_mirr[0][2] += add_highback_z;
 	o_tp_pts_mirr[1][1] += add_highback_y + add_weight_out_y; o_tp_pts_mirr[1][2] += add_highback_z;
 	o_tp_pts_mirr[2][1] += add_highback_y + add_weight_out_y; o_tp_pts_mirr[2][2] += add_highback_z;
 
 	// move only top of seat curve up and back
-	i_st_pts[0][1] += add_highback_y + add_weight_in_y; i_st_pts[0][2] += add_highback_z;
+	// i_st_pts[0][1] += add_highback_y + add_weight_in_y; i_st_pts[0][2] += add_highback_z;
 	o_st_pts[0][1] += add_highback_y + add_weight_out_y; o_st_pts[0][2] += add_highback_z;
-	i_st_pts_mirr[0][1] += add_highback_y + add_weight_in_y; i_st_pts_mirr[0][2] += add_highback_z;
+	// i_st_pts_mirr[0][1] += add_highback_y + add_weight_in_y; i_st_pts_mirr[0][2] += add_highback_z;
 	o_st_pts_mirr[0][1] += add_highback_y + add_weight_out_y; o_st_pts_mirr[0][2] += add_highback_z;
 
 	i_st_pts[2][2] -= add_age_z;
@@ -247,36 +247,38 @@ function updatePts() {
 //-----------------------------------------------------------
 
 
+var i_wide = 245;
+var o_wide = 400;
 
 // inner profile
-var i_bs_pts_start = [ 		[240, 0, 0], 		[240, 0, 252], 		[240, 0, 605] 		];
-var i_bk_pts_start = [ 		[240, 0, 605], 		[240, 400, 720], 	[240, 852, 716] 	];
-var i_tp_pts_start = [		[240, 852, 716], 	[240, 920, 627], 	[240, 860, 552] 	];
-var i_st_pts_start = [		[240, 860, 552], 	[240, 485, 366], 	[240, 496, 14]		];
-var i_ft_pts_start = [		[240, 496, 14], 	[240, 456, -63],	[240, 0, 0]			];
+var i_bs_pts_start = [ 		[i_wide, 0, 0], 		[i_wide, 0, 252], 		[i_wide, 0, 705] 		];
+var i_bk_pts_start = [ 		[i_wide, 0, 705], 		[i_wide, 415, 820], 	[i_wide, 882, 736] 		];
+var i_tp_pts_start = [		[i_wide, 882, 736], 	[i_wide, 980, 627], 	[i_wide, 860, 582] 		];
+var i_st_pts_start = [		[i_wide, 860, 582], 	[i_wide, 385, 466], 	[i_wide, 296, 14]		];
+var i_ft_pts_start = [		[i_wide, 296, 14], 		[i_wide, 256, -143],	[i_wide, 0, 0]			];
 
 
 // outer profile
-var o_bs_pts_start = [		[400, 0, 0], 		[400, 0, 240],		[400, 0, 530]		];
-var o_bk_pts_start = [		[400, 0, 530],		[400, 540, 660],	[400, 907, 640]		];
-var o_tp_pts_start = [		[400, 907, 640],	[400, 965, 570],	[400, 907, 510]		];
-var o_st_pts_start = [		[400, 907, 510],	[400, 503, 330],	[400, 520, 13]		];
-var o_ft_pts_start = [		[400, 520, 13],		[400, 405, -75],	[400, 0, 0]			];
+var o_bs_pts_start = [		[o_wide, 0, 0], 		[o_wide, 0, 285],		[o_wide, 0, 530]		];
+var o_bk_pts_start = [		[o_wide, 0, 530],		[o_wide, 540, 710],		[o_wide, 877, 640]		];
+var o_tp_pts_start = [		[o_wide, 877, 640],		[o_wide, 925, 570],		[o_wide, 800, 510]		];
+var o_st_pts_start = [		[o_wide, 800, 510],		[o_wide, 403, 430],		[o_wide, 320, 13]		];
+var o_ft_pts_start = [		[o_wide, 320, 13],		[o_wide, 205, -105],	[o_wide, 0, 0]			];
 
 
 
-var i_bs_pts_mirr_start = [ 	[-240, 0, 0], 		[-240, 0, 252], 	[-240, 0, 605] 		];
-var i_bk_pts_mirr_start = [ 	[-240, 0, 605], 	[-240, 400, 720], 	[-240, 852, 716] 	];
-var i_tp_pts_mirr_start = [		[-240, 852, 716], 	[-240, 920, 627], 	[-240, 860, 552] 	];
-var i_st_pts_mirr_start = [		[-240, 860, 552], 	[-240, 485, 366], 	[-240, 496, 14]		];
-var i_ft_pts_mirr_start = [		[-240, 496, 14], 	[-240, 456, -63],	[-240, 0, 0]		];
+var i_bs_pts_mirr_start = [ 	[-i_wide, 0, 0], 		[-i_wide, 0, 252], 		[-i_wide, 0, 705] 		];
+var i_bk_pts_mirr_start = [ 	[-i_wide, 0, 705], 		[-i_wide, 415, 820], 	[-i_wide, 882, 736] 	];
+var i_tp_pts_mirr_start = [		[-i_wide, 882, 736], 	[-i_wide, 980, 627], 	[-i_wide, 860, 582] 	];
+var i_st_pts_mirr_start = [		[-i_wide, 860, 582], 	[-i_wide, 385, 466], 	[-i_wide, 296, 14]		];
+var i_ft_pts_mirr_start = [		[-i_wide, 296, 14], 	[-i_wide, 256, -143],	[-i_wide, 0, 0]			];
 
 
-var o_bs_pts_mirr_start = [		[-400, 0, 0], 		[-400, 0, 240],		[-400, 0, 530]		];
-var o_bk_pts_mirr_start = [		[-400, 0, 530],		[-400, 540, 660],	[-400, 907, 640]	];
-var o_tp_pts_mirr_start = [		[-400, 907, 640],	[-400, 965, 570],	[-400, 907, 510]	];
-var o_st_pts_mirr_start = [		[-400, 907, 510],	[-400, 503, 330],	[-400, 520, 13]		];
-var o_ft_pts_mirr_start = [		[-400, 520, 13],	[-400, 405, -75],	[-400, 0, 0]		];
+var o_bs_pts_mirr_start = [		[-o_wide, 0, 0], 		[-o_wide, 0, 285],		[-o_wide, 0, 530]		];
+var o_bk_pts_mirr_start = [		[-o_wide, 0, 530],		[-o_wide, 540, 710],	[-o_wide, 877, 640]		];
+var o_tp_pts_mirr_start = [		[-o_wide, 877, 640],	[-o_wide, 925, 570],	[-o_wide, 800, 510]		];
+var o_st_pts_mirr_start = [		[-o_wide, 800, 510],	[-o_wide, 403, 430],	[-o_wide, 320, 13]		];
+var o_ft_pts_mirr_start = [		[-o_wide, 320, 13],		[-o_wide, 205, -105],	[-o_wide, 0, 0]			];
 
 
 
@@ -488,7 +490,7 @@ Design.updateGeom = function(group, sliceManager) {
 	sideB.position.x = -(i_bs_pts[0][0] * w_mul * w_outerMul);
 	obj.add(sideB);
 
-	sliceManager.addSliceSet({uDir: true, start: -400, end: 400, cuts: 7});
+	sliceManager.addSliceSet({uDir: true, start: -415, end: 415, cuts: 7});
 	sliceManager.addSliceSet({uDir: false, start: -50, end: 600, cuts: 6});
 
 	group.add(obj);
