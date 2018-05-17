@@ -97,9 +97,6 @@ var w_outerMul = 1.7;
 var add_highback_y = 0;
 var add_highback_z = 0;
 
-var add_weight_out_y = 0;
-var add_weight_in_y = 0;
-
 var add_age_z = 0;
 
 var activeMat = matMesh_red;
@@ -146,9 +143,6 @@ function updatePts() {
 	add_highback_y = Design.inputState["pinched-ears"] ? 120 : 0;
 	add_highback_z = Design.inputState["pinched-ears"] ? 80 : 0;
 
-	add_weight_out_y = map_range(Design.inputState["weight"], Design.inputs.weight.min, Design.inputs.weight.max, 0, 90);
-	add_weight_in_y = map_range(Design.inputState["weight"], Design.inputs.weight.min, Design.inputs.weight.max, 0, 60);
-
 	add_age_z = map_range(Design.inputState["age"], Design.inputs.age.min, Design.inputs.age.max, 0, 80);
 
 	// move end of base-curve back to give more grounding
@@ -166,34 +160,22 @@ function updatePts() {
 	o_bk_pts_mirr[0][2] += add_highback_z;
 
 	// move back curve up and back
-	// i_bk_pts[1][1] += add_highback_y + add_weight_in_y; i_bk_pts[1][2] += add_highback_z;
-	// i_bk_pts[2][1] += add_highback_y + add_weight_in_y; i_bk_pts[2][2] += add_highback_z;
-	o_bk_pts[1][1] += add_highback_y + add_weight_out_y; o_bk_pts[1][2] += add_highback_z;
-	o_bk_pts[2][1] += add_highback_y + add_weight_out_y; o_bk_pts[2][2] += add_highback_z;
-	// i_bk_pts_mirr[1][1] += add_highback_y + add_weight_in_y; i_bk_pts_mirr[1][2] += add_highback_z;
-	// i_bk_pts_mirr[2][1] += add_highback_y + add_weight_in_y; i_bk_pts_mirr[2][2] += add_highback_z;
-	o_bk_pts_mirr[1][1] += add_highback_y + add_weight_out_y; o_bk_pts_mirr[1][2] += add_highback_z;
-	o_bk_pts_mirr[2][1] += add_highback_y + add_weight_out_y; o_bk_pts_mirr[2][2] += add_highback_z;
+	o_bk_pts[1][1] += add_highback_y; o_bk_pts[1][2] += add_highback_z;
+	o_bk_pts[2][1] += add_highback_y; o_bk_pts[2][2] += add_highback_z;
+	o_bk_pts_mirr[1][1] += add_highback_y; o_bk_pts_mirr[1][2] += add_highback_z;
+	o_bk_pts_mirr[2][1] += add_highback_y; o_bk_pts_mirr[2][2] += add_highback_z;
 
 	// move top-curve full up and back
-	// i_tp_pts[0][1] += add_highback_y + add_weight_in_y; i_tp_pts[0][2] += add_highback_z;
-	// i_tp_pts[1][1] += add_highback_y + add_weight_in_y; i_tp_pts[1][2] += add_highback_z;
-	// i_tp_pts[2][1] += add_highback_y + add_weight_in_y; i_tp_pts[2][2] += add_highback_z;
-	o_tp_pts[0][1] += add_highback_y + add_weight_out_y; o_tp_pts[0][2] += add_highback_z;
-	o_tp_pts[1][1] += add_highback_y + add_weight_out_y; o_tp_pts[1][2] += add_highback_z;
-	o_tp_pts[2][1] += add_highback_y + add_weight_out_y; o_tp_pts[2][2] += add_highback_z;
-	// i_tp_pts_mirr[0][1] += add_highback_y + add_weight_in_y; i_tp_pts_mirr[0][2] += add_highback_z;
-	// i_tp_pts_mirr[1][1] += add_highback_y + add_weight_in_y; i_tp_pts_mirr[1][2] += add_highback_z;
-	// i_tp_pts_mirr[2][1] += add_highback_y + add_weight_in_y; i_tp_pts_mirr[2][2] += add_highback_z;
-	o_tp_pts_mirr[0][1] += add_highback_y + add_weight_out_y; o_tp_pts_mirr[0][2] += add_highback_z;
-	o_tp_pts_mirr[1][1] += add_highback_y + add_weight_out_y; o_tp_pts_mirr[1][2] += add_highback_z;
-	o_tp_pts_mirr[2][1] += add_highback_y + add_weight_out_y; o_tp_pts_mirr[2][2] += add_highback_z;
+	o_tp_pts[0][1] += add_highback_y; o_tp_pts[0][2] += add_highback_z;
+	o_tp_pts[1][1] += add_highback_y; o_tp_pts[1][2] += add_highback_z;
+	o_tp_pts[2][1] += add_highback_y; o_tp_pts[2][2] += add_highback_z;
+	o_tp_pts_mirr[0][1] += add_highback_y; o_tp_pts_mirr[0][2] += add_highback_z;
+	o_tp_pts_mirr[1][1] += add_highback_y; o_tp_pts_mirr[1][2] += add_highback_z;
+	o_tp_pts_mirr[2][1] += add_highback_y; o_tp_pts_mirr[2][2] += add_highback_z;
 
 	// move only top of seat curve up and back
-	// i_st_pts[0][1] += add_highback_y + add_weight_in_y; i_st_pts[0][2] += add_highback_z;
-	o_st_pts[0][1] += add_highback_y + add_weight_out_y; o_st_pts[0][2] += add_highback_z;
-	// i_st_pts_mirr[0][1] += add_highback_y + add_weight_in_y; i_st_pts_mirr[0][2] += add_highback_z;
-	o_st_pts_mirr[0][1] += add_highback_y + add_weight_out_y; o_st_pts_mirr[0][2] += add_highback_z;
+	o_st_pts[0][1] += add_highback_y; o_st_pts[0][2] += add_highback_z;
+	o_st_pts_mirr[0][1] += add_highback_y; o_st_pts_mirr[0][2] += add_highback_z;
 
 	i_st_pts[2][2] -= add_age_z;
 	o_st_pts[2][2] -= add_age_z;
